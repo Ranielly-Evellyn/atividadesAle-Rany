@@ -12,7 +12,7 @@ export default function Acai() {
     function Calcular() {
         try {
           let final = CalcularAcai(qtdPeq, qtdMed, qtdGra, desc)
-          setResult('O total a pagar é R$'+final)
+          setResult('O total a pagar é R$'+final.toFixed([2]))
         }
         catch(err) {
             setResult(err.message)
