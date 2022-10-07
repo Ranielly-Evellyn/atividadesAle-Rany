@@ -2,10 +2,10 @@ import { useState } from "react"
 import { CalcularAcai } from '../../services/index.js'
 
 export default function Acai() {
-    const [qtdPeq, setQtdPeq] = useState('')
-    const [qtdMed, setQtdMed] = useState('')
-    const [qtdGra, setQtdGra] = useState('')
-    const [desc, setDesc] = useState('')
+    const [qtdPeq, setQtdPeq] = useState(0)
+    const [qtdMed, setQtdMed] = useState(0)
+    const [qtdGra, setQtdGra] = useState(0)
+    const [desc, setDesc] = useState(0)
     const [result, setResult] = useState(0)
 
 
