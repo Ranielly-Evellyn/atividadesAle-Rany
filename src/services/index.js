@@ -1,3 +1,4 @@
+import { toBeEmptyDOMElement } from "@testing-library/jest-dom/dist/matchers";
 
 
 
@@ -26,3 +27,64 @@ export function CalcularAcai (qtdPeq, qtdMed, qtdGra, desc){
 
 
 }
+
+export function SalarioC(salarioBase, bonus, desc){
+    if(salarioBase <= 0 ){
+        throw new Error ('Salário inválido')
+    }
+
+    let bo= salarioBase * bonus /100;
+    let soma= salarioBase + bo - desc;
+
+    return soma;
+}
+
+
+export function Litros (capacidade, consumo, dist){
+    if( capacidade <= 0 || consumo <= 0 || dist <= 0) {
+        throw new Error ('Você não precisa fazer paradas')
+    }
+    
+    let resultado = '';
+    let litros = dist / consumo;
+    let paradas = litros / capacidade;
+
+    paradas = Math.ceil (paradas)
+
+    if (paradas > 1) {
+         resultado = 'Você precisa fazer ' + paradas + ' para abastecer'
+    }
+
+    else if (paradas == 1) {
+        resultado = 'Você precisa fazer uma parada para abastecer'
+    }
+
+    return resultado
+}
+
+export function Febre (temperatura){
+    if( temperatura<=0)
+        throw new Error ('Você não esta vivo')
+}
+    let msg='';
+
+    if(temperatura >= 41){
+        msg = 'Você está com hipertemia'
+    }
+
+    else if (temperatura >= 39.6 && temperatura < 41){
+        msg= 'Você está com febre alta'
+    }
+
+    else if(temperatura >= 37.6 && temperatura < 39.6){
+        msg='Você está com febre'
+    }
+
+    else if( temperatura >= 36 && temperatura < 37.6){
+        msg= 'Sua temeperatura está normal'
+    }
+
+    else if(temperatura < 36){
+        msg= 'Você está com hipotermia'
+    }
+
