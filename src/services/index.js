@@ -63,9 +63,8 @@ export function Litros (capacidade, consumo, dist){
 }
 
 export function Febre (temperatura){
-    if( temperatura<=0)
-        throw new Error ('Você não esta vivo')
-}
+
+
     let msg='';
 
     if(temperatura >= 41){
@@ -84,7 +83,11 @@ export function Febre (temperatura){
         msg= 'Sua temeperatura está normal'
     }
 
-    else if(temperatura < 36){
+    else {
         msg= 'Você está com hipotermia'
     }
+
+    return msg;
+}
+  
 

@@ -1,18 +1,18 @@
-import { useState } from "react";
+import { useState } from "react"
 import { Febre } from '../../services/index.js'
 
 
 
-export default function temeperatura (){
+export default function Temperatura (){
     
-    const [temeperatura, setTemperatura] = useState (0)
-    const [result, setResult] = useState(0)
+    const [temperatura, setTemperatura] = useState (0);
+    const [result, setResult] = useState(0);
 
 
-    function () {
+    function Grau () {
         try {
-            let resultado = Febre (temeperatura)
-            setResult ( resultado)
+            let final= Febre (temperatura)
+            setResult (final)
         
         } catch (err) {
             setResult (err.message)
@@ -25,23 +25,15 @@ export default function temeperatura (){
     return (
         <main>
             <div>
-                <h1>Paradas</h1>
+                <h1>Temperatura</h1>
             </div>
 
             <div>
-                <label>Capacidade</label> <input type='number' value={capacidade} onChange={e => setCapacidade(Number(e.target.value))} />
+                <label>Informe a sua temperatura</label> <input type='number' value={temperatura} onChange={e => setTemperatura(Number(e.target.value))} />
             </div>
 
             <div>
-                <label>Consumo</label> <input type='number' value={consumo} onChange={e => setConsumo(Number(e.target.value))} />
-            </div>
-
-            <div>
-                <label>Distância</label> <input type='number' value={dist} onChange={e => setDist(Number(e.target.value))} />
-            </div>
-
-            <div>
-                <button onClick={Par}> Calcular  </button>
+                <button onClick={Grau}> Verificar  </button>
 
                     <p> {result}</p> 
             </div>
