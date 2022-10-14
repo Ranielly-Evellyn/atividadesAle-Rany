@@ -1,4 +1,4 @@
-import { toBeEmptyDOMElement } from "@testing-library/jest-dom/dist/matchers";
+
 
 
 
@@ -10,8 +10,8 @@ export function CalcularAcai (qtdPeq, qtdMed, qtdGra, desc){
         if ( qtdPeq < 0 || qtdMed < 0 || qtdGra < 0 ) {
             throw new Error('Impossível realizar compra');
         }
-        if(Number.isInteger(qtdPeq) == false || Number.isInteger(qtdMed) == false || 
-           Number.isInteger(qtdGra) == false || Number.isInteger(desc) == false) {
+        if(Number.isInteger(qtdPeq) === false || Number.isInteger(qtdMed) === false || 
+           Number.isInteger(qtdGra) === false || Number.isInteger(desc) === false) {
             throw new Error('Caracteres Inválidos')
         }
 
@@ -55,7 +55,7 @@ export function Litros (capacidade, consumo, dist){
          resultado = 'Você precisa fazer ' + paradas + ' para abastecer'
     }
 
-    else if (paradas == 1) {
+    else if (paradas === 1) {
         resultado = 'Você precisa fazer uma parada para abastecer'
     }
 
@@ -88,6 +88,64 @@ export function Febre (temperatura){
     }
 
     return msg;
+}
+
+export function OrcamentoFamiliar (ganhos, gastos) {
+    
+    let calculo = gastos / ganhos * 100;
+
+
+    let msg = ''
+
+    if(ganhos < 0 || gastos < 0)
+        throw new Error('Informações inválidas!');
+
+    
+
+    if ( calculo < 20 ){
+        msg= 'Parabéns você está gerenciando bem o seu orçamento'
+    }
+
+    else if (calculo >= 21 && calculo <= 50) {
+        msg = 'Muito bem, seus gastos não ultrapassam metade dos ganhos'
+    }
+
+    else if ( calculo >= 51 && calculo<= 80) {
+        msg= 'Atenção, melhor conter os gastos!'
+    }
+
+    else if (calculo >= 81 && calculo <= 100) {
+        msg= 'Cuidado, seu orçamento pode ficar comprometido!'
+    }
+
+    else  {
+        msg= 'Orçamento comprometido! Hora de rever seus gastos!'
+    }
+
+    return msg
+}
+
+export function totalCompra(inteiras, meias, diaSemana, nacional){
+    let total = 0;
+    
+    if(inteiras < 0 || meias < 0){
+        throw new Error('Os ingressos não podem ter valores negativos');
+    }
+
+
+    if(nacional === true){
+        total = (inteiras + meias ) * 5;
+    }
+
+    else if(diaSemana === 'quarta-feira'){
+        total = (inteiras + meias) * (28.5 / 2);
+    }
+
+    else{
+        total = (inteiras * 28.5 ) + (meias * 28.5 / 2);
+    }
+
+    return total;
 }
   
 

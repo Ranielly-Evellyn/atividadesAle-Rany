@@ -8,6 +8,8 @@ import Salario from './atividade/salario/index.js'
 import Paradas from './atividade/paradas/index.js'
 import Temperatura from './atividade/temperatura/index.js'
 import Home from './atividade/home/index.js'
+import Orcamento from './atividade/orcamento/index.js'
+import Cinema from './atividade/cinema/index.js'
 
 
 export default function  Index (){
@@ -22,6 +24,8 @@ export default function  Index (){
             <Route path= '/paradas' element= {<Paradas/>} />
             <Route path= '/temperatura' element= {<Temperatura/>} />
             <Route path= '/home' element= {<Home/>} />
+            <Route path= '/orcamento' element= {<Orcamento/>} />
+            <Route path= '/cinema' element= {<Cinema/>} />
         </Routes>
         </BrowserRouter>
     )

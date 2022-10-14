@@ -10,7 +10,7 @@ export default function Signo(){
     const [result, setResult] = useState ('');
 
     function Libra(){
-        if(mes == 'Setembro' && dia >= 23 || mes == 'Outubro' && dia <=22 )
+        if(mes === 'Setembro' && dia >= 23 || mes === 'Outubro' && dia <=22 )
             setResult('Seu signo é de Libra!')
         else{
             setResult('Seu signo não é de Libra!')
