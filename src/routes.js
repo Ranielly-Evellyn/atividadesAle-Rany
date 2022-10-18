@@ -10,6 +10,9 @@ import Temperatura from './atividade/temperatura/index.js'
 import Home from './atividade/home/index.js'
 import Orcamento from './atividade/orcamento/index.js'
 import Cinema from './atividade/cinema/index.js'
+import Contar from './atividade/contar/index.js'
+import Linhas from './atividade/linhas/index.js'
+import Retangulo from './atividade/retangulo/index.js'
 
 
 export default function  Index (){
@@ -26,6 +29,10 @@ export default function  Index (){
             <Route path= '/home' element= {<Home/>} />
             <Route path= '/orcamento' element= {<Orcamento/>} />
             <Route path= '/cinema' element= {<Cinema/>} />
+            <Route path= '/contar' element= {<Contar/>} />
+            <Route path= '/linhas' element= {<Linhas/>} />
+            <Route path= '/desenhoretangulo' element= {<Retangulo/>} />
+
         </Routes>
         </BrowserRouter>
     )

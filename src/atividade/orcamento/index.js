@@ -6,7 +6,7 @@ import {OrcamentoFamiliar} from '../../services/index'
 export default function Orcamento() {
     const [gastos,setGastos] = useState (0)
     const [ganhos,setGanhos] = useState (0)
-    const [resp,setResp] = useState ()
+    const [resp,setResp] = useState ([])
 
      function Calculo() {
         try {

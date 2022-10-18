@@ -147,5 +147,49 @@ export function totalCompra(inteiras, meias, diaSemana, nacional){
 
     return total;
 }
+
+export function totalContar(inicio, fim){
+
+    if(isNaN (inicio)|| isNaN (fim)) throw new Error ('Isso não é um número!');
+    
+
+    let array= []
+    let i= 0
+    
+    for(let contar = inicio; contar <= fim; contar ++){ 
+      array [i] = contar;
+      i++
+     }
+
+     return array;
+}
   
 
+export function contarLinhas (tamanho) {
+
+    let array = []
+
+
+    for(let contar= 0; contar < tamanho; contar ++){
+
+        array[contar] = ("*");
+        
+    }
+
+    return array;
+}
+
+
+export function contarRetangulo(linhas, colunas, simb) {
+    
+    let retangulo = [];
+    for(let contar = 0; contar < linhas; contar ++) {
+        for (let j = 0; j < colunas; j++) {
+            retangulo.push(simb);
+        }
+        retangulo.push('');
+    }
+    return retangulo;
+}
+        
+    
