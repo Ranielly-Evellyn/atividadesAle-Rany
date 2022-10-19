@@ -13,6 +13,7 @@ import Cinema from './atividade/cinema/index.js'
 import Contar from './atividade/contar/index.js'
 import Linhas from './atividade/linhas/index.js'
 import Retangulo from './atividade/retangulo/index.js'
+import Cafe from './atividade/cafe'
 
 
 export default function  Index (){
@@ -32,6 +33,7 @@ export default function  Index (){
             <Route path= '/contar' element= {<Contar/>} />
             <Route path= '/linhas' element= {<Linhas/>} />
             <Route path= '/desenhoretangulo' element= {<Retangulo/>} />
+            <Route path= '/cafe' element= {<Cafe/>} />
 
         </Routes>
         </BrowserRouter>

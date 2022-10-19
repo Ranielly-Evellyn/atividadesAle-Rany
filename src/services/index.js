@@ -192,4 +192,15 @@ export function contarRetangulo(linhas, colunas, simb) {
     return retangulo;
 }
         
+
+export function cafe(alunos, capac, mili){
+    let tt = (alunos * mili) / 1000;
+    let l = capac;
+
+    while(tt > l){
+        l += capac
+    }
+
+    return l;
+}
     
