@@ -6,7 +6,7 @@ export default function Contar(){
 
     const [inicio, setInicio] = useState ()
     const [fim, setFim] = useState ()
-    const[resp, setResp] = useState()
+    const[resp, setResp] = useState([])
 
     function calcularFim() {
         try {
