@@ -180,16 +180,22 @@ export function contarLinhas (tamanho) {
 }
 
 
-export function contarRetangulo(linhas, colunas, simb) {
+export function contarRetangulo(base, altura) {
     
-    let retangulo = [];
-    for(let contar = 0; contar < linhas; contar ++) {
-        for (let j = 0; j < colunas; j++) {
-            retangulo.push(simb);
+    let a = [];
+    let array = [];
+
+    for(let i = 0; i < altura; i++) {
+
+        for(let h = 0; h < base; h++) {
+            array[h] = '*';
         }
-        retangulo.push('');
+
+        a[i] = array;
     }
-    return retangulo;
+
+    return a;
+
 }
         
 

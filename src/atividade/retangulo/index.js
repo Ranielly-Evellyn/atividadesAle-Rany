@@ -3,33 +3,40 @@ import { contarRetangulo } from "../../services"
 
 
 
-export default function LinhasRetangulo(){
+export default function LinhasRetangulo() {
 
-    const[linhas, setLinhas] = useState(0)
-    const [coluna, setColuna] = useState()
-    const [resp, setResp] = useState()
+    const [base, setBase] = useState()
+    const [altura, setAltura] = useState()
+    const [resp, setResp] = useState([])
 
-    function CalculoRetangulo(linhas, coluna, simb) {
+    function CalculoRetangulo() {
         try {
-            let final = contarRetangulo (linhas, coluna, simb)
-            setResp (final)
+            let final = contarRetangulo(base, altura)
+            setResp(final)
 
-        } catch(err){
-            setResp (err.message ) 
+        } catch (err) {
+            setResp(err.message)
         }
 
 
-     }
-    
-    return(
-        <main className='page-orcamento'>
+    }
+
+    return (
+        <main>
             <h1>Desenho Retângulo</h1>
 
-            Linhas: <input type='number' value={linhas} onChange = { e => setLinhas (Number (e.target.value)) }/>
-            Coluna: <input type='number' value={coluna} onChange = { e => setColuna (Number (e.target.value)) }/>
+            Linhas: <input type='number' value={base} onChange={e => setBase(Number(e.target.value))} />
+            Coluna: <input type='number' value={altura} onChange={e => setAltura(Number(e.target.value))} />
 
-            <button onClick={ CalculoRetangulo } > Calcular </button>
-            {resp}
+            <button onClick={CalculoRetangulo} > Calcular </button>
+
+            {resp.map(item =>
+                <div>
+                    {item}
+                </div>
+            )}
+
         </main>
+
     )
- }   
+}   
