@@ -180,16 +180,19 @@ export function contarLinhas (tamanho) {
 }
 
 
-export function contarRetangulo(base, altura) {
+export function contarRetangulo(base, altura, simb) {
     
     let a = [];
     let array = [];
 
     for(let i = 0; i < altura; i++) {
+        array[i] = simb;
 
         for(let h = 0; h < base; h++) {
-            array[h] = '*';
+            a [h] = new Array (array)
         }
+
+        array.push('')
 
         a[i] = array;
     }
@@ -198,6 +201,21 @@ export function contarRetangulo(base, altura) {
 
 }
         
+
+export default function desenharRetangulo(l,c,simbolo){
+    let matriz = []
+    let retangulo = [];
+
+    for(let i = 0; i<l; i++){
+        retangulo[i] = simbolo
+    for(let j=0; j<c; j++){
+        matriz [j] = new Array(retangulo)
+    }
+        retangulo.push('')
+
+    }
+    return matriz;
+}
 
 export function cafe(alunos, capac, mili){
     let tt = (alunos * mili) / 1000;
