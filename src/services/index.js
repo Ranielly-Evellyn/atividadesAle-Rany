@@ -227,4 +227,21 @@ export function cafe(alunos, capac, mili){
 
     return l;
 }
+
+
+export function jurosComposto (capital, valor, taxa, periodo){
+    if (capital, taxa, periodo === undefined || capital, taxa, periodo ===isNaN){
+        throw new Error ('Insira corretamente todas as informações')
+    }
+    let cap = capital - valor
+    let montante= cap * ((1+(taxa/100)) ** periodo);
+    let juros= montante - cap;
+    let vp = montante / (periodo * 12)
+    let array =['Montante ' + montante.toFixed([2]), '  Juros ' + juros.toFixed([2]), ' Parcela ' + vp.toFixed([2]) ]
+
+    
+    return array;
+
+}
+
     

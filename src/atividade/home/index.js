@@ -24,6 +24,9 @@ export default function Home() {
                 <Link to= '/temperatura'> Temperatura</Link>
                 <br></br>
                 <Link to= '/desenhoretangulo'> Retângulo</Link>
+                <br></br>
+                <Link to= '/juroscomposto'> Juros</Link>
+                
                     
                 
             </div>
