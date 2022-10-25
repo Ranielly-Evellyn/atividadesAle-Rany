@@ -244,4 +244,18 @@ export function jurosComposto (capital, valor, taxa, periodo){
 
 }
 
+export function contarAlunos(fim){
+
+    if( isNaN (fim)) throw new Error ('Isso não é um número!');
+    
+
+    let array= []
+    
+    for(let contar = 1; contar <= fim; contar++){ 
+      array = [...array, contar]
+     }
+
+     return array;
+}
+
     

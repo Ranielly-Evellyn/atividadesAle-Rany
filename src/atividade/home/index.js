@@ -26,6 +26,8 @@ export default function Home() {
                 <Link to= '/desenhoretangulo'> Retângulo</Link>
                 <br></br>
                 <Link to= '/juroscomposto'> Juros</Link>
+                <br></br>
+                <Link to= '/contaralunos'> Contar Alunos</Link>
                 
                     
                 

@@ -15,6 +15,7 @@ import Linhas from './atividade/linhas/index.js'
 import Retangulo from './atividade/retangulo/index.js'
 import Cafe from './atividade/cafe'
 import Juros from './atividade/juroscomposto/index.js'
+import ContarAluno  from './atividade/contarAluno/index.js'
 
 
 export default function  Index (){
@@ -36,6 +37,7 @@ export default function  Index (){
             <Route path= '/desenhoretangulo' element= {<Retangulo/>} />
             <Route path= '/cafe' element= {<Cafe/>} />
             <Route path= '/juroscomposto' element= {<Juros/>} />
+            <Route path= '/contaralunos' element= {<ContarAluno/>} />
 
         </Routes>
         </BrowserRouter>
